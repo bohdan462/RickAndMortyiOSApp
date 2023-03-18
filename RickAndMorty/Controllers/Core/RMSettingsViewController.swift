@@ -18,6 +18,5 @@ final class RMSettingsViewController: UIViewController {
     }
     
 
-    
 
 }
