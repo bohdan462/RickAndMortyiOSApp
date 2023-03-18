@@ -14,9 +14,17 @@ final class RMCharacterViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .orange
         title = "Characters"
+        
+        let request = RMRequest(
+            endpoint: .character)
+        
+        print(request.url)
+        
+        RMService.shared.execute(request, expecting: RMCharacter.self, complition: { result in
+           
+            
+        })
     }
-    
-
  
 
 }
