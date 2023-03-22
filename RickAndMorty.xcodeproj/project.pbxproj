@@ -36,6 +36,7 @@
 		CA780B0829C683B30093DA57 /* RMCharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA780B0729C683B30093DA57 /* RMCharacterDetailView.swift */; };
 		CA780B0A29C683DF0093DA57 /* RMCharacterDetailViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA780B0929C683DF0093DA57 /* RMCharacterDetailViewViewModel.swift */; };
 		CA780B0C29C688A90093DA57 /* RMFooterLoadingCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA780B0B29C688A90093DA57 /* RMFooterLoadingCollectionReusableView.swift */; };
+		CAAF140029CB985900F00DF4 /* RMImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAF13FF29CB985900F00DF4 /* RMImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		CA780B0729C683B30093DA57 /* RMCharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterDetailView.swift; sourceTree = "<group>"; };
 		CA780B0929C683DF0093DA57 /* RMCharacterDetailViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterDetailViewViewModel.swift; sourceTree = "<group>"; };
 		CA780B0B29C688A90093DA57 /* RMFooterLoadingCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMFooterLoadingCollectionReusableView.swift; sourceTree = "<group>"; };
+		CAAF13FF29CB985900F00DF4 /* RMImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 		CA780AD529C4C9520093DA57 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				CAAF13FF29CB985900F00DF4 /* RMImageLoader.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				CA780ABD29C4C7F40093DA57 /* AppDelegate.swift in Sources */,
 				CA780AE429C4CAA50093DA57 /* RMEpisodeViewController.swift in Sources */,
 				CA780ADD29C4C9F90093DA57 /* RMEpisode.swift in Sources */,
+				CAAF140029CB985900F00DF4 /* RMImageLoader.swift in Sources */,
 				CA780ABF29C4C7F40093DA57 /* SceneDelegate.swift in Sources */,
 				CA780AE629C4CAB20093DA57 /* RMSettingsViewController.swift in Sources */,
 				CA780B0129C65EAD0093DA57 /* RMCharacterCollectionViewCell.swift in Sources */,
