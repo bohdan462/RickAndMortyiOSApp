@@ -75,6 +75,7 @@ final class RMRequest {
         print(self.endpoint, self.pathComponents, self.queryParameters)
     }
     
+    /// Attemp to create request, URL to parse
     convenience init?(url: URL) {
         let string = url.absoluteString
         if !string.contains(Constants.baseUrl) {
@@ -85,8 +86,13 @@ final class RMRequest {
             let component = trimed.components(separatedBy: "/")
             if !component.isEmpty {
                 let endpointString = component[0]
-                if let rmEndpoint = RMEndpoint(rawValue: endpointString) {
-                    self.init(endpoint: rmEndpoint)
+                var pathComponents = [String]()
+                if component.count > 1 {
+                    pathComponents = component
+                    pathComponents.removeFirst()
+                }
+                if let rmEndpoint = RMEndpoint( rawValue: endpointString) {
+                    self.init(endpoint: rmEndpoint, pathComponents: pathComponents)
                     return
                 }
             }
