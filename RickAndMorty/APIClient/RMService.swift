@@ -12,6 +12,10 @@ import Foundation
 final class RMService {
     ///Shared singelton instance
     static let shared = RMService()
+    
+    private let cacheManager = RMAPICacheManager()
+    
+    
     ///Privatized constructor
     private init() {
         
@@ -31,12 +35,25 @@ final class RMService {
                                     expecting type: T.Type,
                                     complition: @escaping (Result<T, Error>) -> Void
     ) {
+        //USING CACHE
+        if let cachedData = cacheManager.cacheResponse(for: request.endpoint, url: request.url) {
+            print("Using cache api response")
+            do {
+                let result = try JSONDecoder().decode(type.self, from: cachedData)
+                complition(.success(result))
+            }
+            catch {
+                complition(.failure(error))
+            }
+            return
+        }
         guard let urlRequest = self.request(from: request) else {
             complition(.failure(RMServiceError.failedToCreateRequest))
             return
         }
         
-        let task = URLSession.shared.dataTask(with: urlRequest, completionHandler: { data, _, error in
+        //IF NOT CACHED
+        let task = URLSession.shared.dataTask(with: urlRequest, completionHandler: { [weak self] data, _, error in
             print("url: \(urlRequest)")
             guard let data = data, error == nil else {
                 complition(.failure(error ?? RMServiceError.failedToGetData))
@@ -45,6 +62,7 @@ final class RMService {
             //Decode data
             do {
                 let result = try JSONDecoder().decode(type.self, from: data)
+                self?.cacheManager.setCache(for: request.endpoint, url: request.url, data: data)
                 complition(.success(result))
             }
             catch {
