@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA755E4529CCB8810051DCE6 /* RMEpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA755E4429CCB8810051DCE6 /* RMEpisodeDetailViewController.swift */; };
 		CA780ABD29C4C7F40093DA57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA780ABC29C4C7F40093DA57 /* AppDelegate.swift */; };
 		CA780ABF29C4C7F40093DA57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA780ABE29C4C7F40093DA57 /* SceneDelegate.swift */; };
 		CA780AC129C4C7F40093DA57 /* RMTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA780AC029C4C7F40093DA57 /* RMTabViewController.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA755E4429CCB8810051DCE6 /* RMEpisodeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEpisodeDetailViewController.swift; sourceTree = "<group>"; };
 		CA780AB929C4C7F40093DA57 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA780ABC29C4C7F40093DA57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA780ABE29C4C7F40093DA57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				CA780B0529C682D40093DA57 /* RMCharacterDetailViewController.swift */,
+				CA755E4429CCB8810051DCE6 /* RMEpisodeDetailViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				CAAF140829CBC4A100F00DF4 /* RMCharacterEpisodesCollectionViewCell.swift in Sources */,
 				CA780AE829C4D2E90093DA57 /* RMService.swift in Sources */,
 				CA780AD829C4C9D40093DA57 /* RMLocation.swift in Sources */,
+				CA755E4529CCB8810051DCE6 /* RMEpisodeDetailViewController.swift in Sources */,
 				CA780AEC29C4D38B0093DA57 /* RMEndpoint.swift in Sources */,
 				CA780ADB29C4C9EC0093DA57 /* RMCharacter.swift in Sources */,
 				CA780B0329C6610A0093DA57 /* RMCharacterCollectionViewCellViewModel.swift in Sources */,
