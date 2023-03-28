@@ -75,7 +75,7 @@ final class RMCharacterInfoCollectionViewCell: UICollectionViewCell {
             iconImageView.widthAnchor.constraint(equalToConstant: 30),
             iconImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 35),
             iconImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 20),
-
+            
             
             valueLabel.leftAnchor.constraint(equalTo: iconImageView.rightAnchor, constant: 10),
             valueLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -10),
@@ -99,8 +99,8 @@ final class RMCharacterInfoCollectionViewCell: UICollectionViewCell {
         titleLabel.text = viewModel.title
         valueLabel.text = viewModel.displayValue
         iconImageView.image = viewModel.iconImage
+        print("Image is set with image: \(viewModel.iconImage.debugDescription)")
         iconImageView.tintColor = viewModel.tintColor
         titleLabel.textColor = viewModel.tintColor
-        
     }
 }
