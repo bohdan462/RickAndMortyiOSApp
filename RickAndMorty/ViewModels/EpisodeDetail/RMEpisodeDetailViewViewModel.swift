@@ -35,6 +35,13 @@ class RMEpisodeDetailViewViewModel {
         self.endpointUrl = endpointUrl
     }
     
+    public func character(at index: Int) -> RMCharacter? {
+        guard let dataTupel = dataTupel else {
+            return nil
+        }
+        return dataTupel.characters[index]
+    }
+    
     //MARK: - Private
     
     private func createCellViewModels() {
@@ -44,12 +51,18 @@ class RMEpisodeDetailViewViewModel {
 
         let episode = dataTupel.episode
         let characters = dataTupel.characters
+        
+        var createdString = episode.created
+        if let date = RMCharacterInfoCollectionViewCellViewModel.dateFormatter.date(from: episode.created) {
+            createdString = RMCharacterInfoCollectionViewCellViewModel.shortDateFormatter.string(from: date) 
+        }
+        
         cellViewModels = [
             .information(viewModel: [
                 .init(title: "Episode Name", value: episode.name ),
                 .init(title: "Air Date", value: episode.air_date ),
                 .init(title: "Episode", value: episode.episode ),
-                .init(title: "Created", value: episode.created ),
+                .init(title: "Created", value: createdString ),
             ]),
             .characters(viewModel: characters.compactMap({ character in
                 return RMCharacterCollectionViewCellViewModel(characterName: character.name,
