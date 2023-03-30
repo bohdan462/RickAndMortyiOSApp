@@ -9,7 +9,7 @@ import UIKit
 
 protocol RMEpisodeDetailViewDelegate: AnyObject {
     func rmEpisodeDetailView(_ detailView: RMEpisodeDetailView,
-                             didselectCharacter: RMCharacter)
+                             didSelect character: RMCharacter)
 }
 
 final class RMEpisodeDetailView: UIView {
@@ -155,7 +155,7 @@ extension RMEpisodeDetailView: UICollectionViewDelegate, UICollectionViewDataSou
             break
         case .characters:
             guard let character = viewModel.character(at: indexPath.row) else { return }
-            delegate?.rmEpisodeDetailView(self, didselectCharacter: character)
+            delegate?.rmEpisodeDetailView(self, didSelect: character)
         }
         
     }
