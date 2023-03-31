@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA65F62329D7696A0009067F /* RMLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA65F62229D7696A0009067F /* RMLocationView.swift */; };
+		CA65F62529D76C7A0009067F /* RMLocationViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA65F62429D76C7A0009067F /* RMLocationViewViewModel.swift */; };
 		CA755E4529CCB8810051DCE6 /* RMEpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA755E4429CCB8810051DCE6 /* RMEpisodeDetailViewController.swift */; };
 		CA755E4729CCBB7E0051DCE6 /* RMAPICacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA755E4629CCBB7E0051DCE6 /* RMAPICacheManager.swift */; };
 		CA755E4929CCC4170051DCE6 /* RMEpisodeDetailViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA755E4829CCC4170051DCE6 /* RMEpisodeDetailViewViewModel.swift */; };
@@ -60,6 +62,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA65F62229D7696A0009067F /* RMLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMLocationView.swift; sourceTree = "<group>"; };
+		CA65F62429D76C7A0009067F /* RMLocationViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMLocationViewViewModel.swift; sourceTree = "<group>"; };
 		CA755E4429CCB8810051DCE6 /* RMEpisodeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEpisodeDetailViewController.swift; sourceTree = "<group>"; };
 		CA755E4629CCBB7E0051DCE6 /* RMAPICacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMAPICacheManager.swift; sourceTree = "<group>"; };
 		CA755E4829CCC4170051DCE6 /* RMEpisodeDetailViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEpisodeDetailViewViewModel.swift; sourceTree = "<group>"; };
@@ -125,6 +129,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA65F62129D7694A0009067F /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				CA65F62229D7696A0009067F /* RMLocationView.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
 		CA755E4C29CCC6750051DCE6 /* Episode */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +215,7 @@
 		CA780AD229C4C9330093DA57 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CA65F62129D7694A0009067F /* Location */,
 				CA76FF2B29D60B7F001031CC /* SwiftUI */,
 				CA850F5229D27AAC0032E455 /* EpisodeDetails */,
 				CA755E4C29CCC6750051DCE6 /* Episode */,
@@ -222,6 +235,7 @@
 				CA780AF929C6558F0093DA57 /* RMCharacterListViewViewModel.swift */,
 				CA780B0229C6610A0093DA57 /* RMCharacterCollectionViewCellViewModel.swift */,
 				CA755E4F29CCC95C0051DCE6 /* RMEpisodeListViewViewModel.swift */,
+				CA65F62429D76C7A0009067F /* RMLocationViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -462,6 +476,7 @@
 				CA780AEA29C4D2F80093DA57 /* RMRequest.swift in Sources */,
 				CA780AFA29C6558F0093DA57 /* RMCharacterListViewViewModel.swift in Sources */,
 				CA780AE029C4CA850093DA57 /* RMCharacterViewController.swift in Sources */,
+				CA65F62329D7696A0009067F /* RMLocationView.swift in Sources */,
 				CA755E5029CCC95C0051DCE6 /* RMEpisodeListViewViewModel.swift in Sources */,
 				CA755E4729CCBB7E0051DCE6 /* RMAPICacheManager.swift in Sources */,
 				CA755E5229CCCCE30051DCE6 /* RMGetAllEpisodesResponse.swift in Sources */,
@@ -469,6 +484,7 @@
 				CA850F5429D27AEA0032E455 /* RMEpisodeInfoCollectionViewCell.swift in Sources */,
 				CA755E4929CCC4170051DCE6 /* RMEpisodeDetailViewViewModel.swift in Sources */,
 				CA780B0829C683B30093DA57 /* RMCharacterDetailView.swift in Sources */,
+				CA65F62529D76C7A0009067F /* RMLocationViewViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,7 +553,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -592,7 +608,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -612,6 +628,8 @@
 				DEVELOPMENT_TEAM = M54A7BX79B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RickAndMorty/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rick & Morthy";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -639,6 +657,8 @@
 				DEVELOPMENT_TEAM = M54A7BX79B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RickAndMorty/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rick & Morthy";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

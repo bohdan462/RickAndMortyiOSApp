@@ -14,8 +14,6 @@ struct RMSettingsView: View {
         self.viewModel = viewModel
     }
     
-    
-    
     var body: some View {
         List(viewModel.cellViewModels) { viewModel in
             HStack {
