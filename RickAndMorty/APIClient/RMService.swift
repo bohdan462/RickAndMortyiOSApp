@@ -37,7 +37,6 @@ final class RMService {
     ) {
         //USING CACHE
         if let cachedData = cacheManager.cacheResponse(for: request.endpoint, url: request.url) {
-            print("Using cache api response")
             do {
                 let result = try JSONDecoder().decode(type.self, from: cachedData)
                 complition(.success(result))
@@ -54,7 +53,6 @@ final class RMService {
         
         //IF NOT CACHED
         let task = URLSession.shared.dataTask(with: urlRequest, completionHandler: { [weak self] data, _, error in
-            print("url: \(urlRequest)")
             guard let data = data, error == nil else {
                 complition(.failure(error ?? RMServiceError.failedToGetData))
                 return
@@ -66,7 +64,6 @@ final class RMService {
                 complition(.success(result))
             }
             catch {
-                print("Error returning data: \(error)")
                 complition(.failure(error))
             }
         })

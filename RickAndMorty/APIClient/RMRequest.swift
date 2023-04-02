@@ -72,7 +72,6 @@ final class RMRequest {
         self.endpoint = endpoint
         self.pathComponents = pathComponents
         self.queryParameters = queryParameters
-        print(self.endpoint, self.pathComponents, self.queryParameters)
     }
     
     /// Attemp to create request, URL to parse
